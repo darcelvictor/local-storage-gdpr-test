@@ -1,17 +1,10 @@
 
-    console.log("JS is load");
-    
-
-
+    window.addEventListener("load", ()=>{
+   
     const printItemInDom = (items) =>{
         const list = document.querySelector("#list");
         list.innerHTML=items;
     }
-
-    // const testForm = () => {
-    //     console.log(item.innerHTML);
-    //     return item.innerHTML!="";
-    // }
 
     const loopDataLocalStorage = ()=>{
         let data ="";
@@ -39,3 +32,5 @@
         localStorage.clear();
         printItemInDom("");
     }
+    console.log("JS is load");
+});
