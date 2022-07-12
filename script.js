@@ -24,7 +24,7 @@
             printItemInDom(loopDataLocalStorage());
         }
         else {
-            alert("entrez une valeur")
+            alert("Item's field is empty")
         }
     }
 
