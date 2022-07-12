@@ -1,27 +1,38 @@
 
     console.log("JS is load");
+    
+
 
     const printItemInDom = (items) =>{
-        const data = items;
         const list = document.querySelector("#list");
-        list.innerHTML=data;
+        list.innerHTML=items;
     }
 
+    // const testForm = () => {
+    //     console.log(item.innerHTML);
+    //     return item.innerHTML!="";
+    // }
 
     const loopDataLocalStorage = ()=>{
         let data ="";
         for(let i = 0; i< localStorage.length; i++){
-            data += "<br>";
+            data += "<li>";
             data += localStorage.getItem(i);
+            data += "</li>";
         }
         return data;
     }
 
 
     button.onclick=()=>{
-        localStorage.setItem(localStorage.length,item.value);
-        console.log(item.value);
-        printItemInDom(loopDataLocalStorage());
+        if(item.value!=""){
+            localStorage.setItem(localStorage.length,item.value);
+            item.value="";
+            printItemInDom(loopDataLocalStorage());
+        }
+        else {
+            alert("entrez une valeur")
+        }
     }
 
     clear.onclick=()=>{
