@@ -32,5 +32,7 @@
         localStorage.clear();
         printItemInDom("");
     }
+
+    printItemInDom(loopDataLocalStorage());
     console.log("JS is load");
 };
