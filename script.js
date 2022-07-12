@@ -1,5 +1,5 @@
 
-    window.addEventListener("load", ()=>{
+    window.onload = () =>{
    
     const printItemInDom = (items) =>{
         const list = document.querySelector("#list");
@@ -33,4 +33,4 @@
         printItemInDom("");
     }
     console.log("JS is load");
-});
+};
