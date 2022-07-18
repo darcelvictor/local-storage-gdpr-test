@@ -1,39 +1,35 @@
+import Cookies from "node_modulesjs-cookiedistjs.cookie.mjs";
 
-    window.onload = () =>{
-
-    
-   
-    const printItemInDom = (items) =>{
+window.onload = () => {
+    const printItemInDom = (items) => {
         const list = document.querySelector("#list");
-        list.innerHTML=items;
-    }
+        list.innerHTML = items;
+    };
 
-    const loopDataLocalStorage = ()=>{
-        let data ="";
-        for(let i = 0; i< localStorage.length; i++){
+    const loopDataLocalStorage = () => {
+        let data = "";
+        for (let i = 0; i < localStorage.length; i++) {
             data += "<li>";
             data += localStorage.getItem(i);
             data += "</li>";
         }
         return data;
-    }
+    };
 
-
-    button.onclick=()=>{
-        if(item.value!=""){
-            localStorage.setItem(localStorage.length,item.value);
-            item.value="";
+    button.onclick = () => {
+        if (item.value != "") {
+            localStorage.setItem(localStorage.length, item.value);
+            item.value = "";
             printItemInDom(loopDataLocalStorage());
+        } else {
+            alert("Item's field is empty");
         }
-        else {
-            alert("Item's field is empty")
-        }
-    }
+    };
 
-    clear.onclick=()=>{
+    clear.onclick = () => {
         localStorage.clear();
         printItemInDom("");
-    }
+    };
 
     printItemInDom(loopDataLocalStorage());
     console.log("JS is load");
