@@ -1,5 +1,7 @@
 
     window.onload = () =>{
+
+    
    
     const printItemInDom = (items) =>{
         const list = document.querySelector("#list");
